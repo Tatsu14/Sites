@@ -1,0 +1,104 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+
+    /*=============== VALUES ===============*/
+    --header-height: 4rem;
+    --banner-height: ;
+    --footer-height: ;
+
+    /*=============== COLORS ===============*/
+    --grey: rgb(110, 110, 110);
+    --red: rgb(200, 30, 30);
+    --blue: rgb(30, 30, 200);
+    --green: rgb(30, 200, 30);
+    --body-color: rgb(11, 17, 25);
+    --body-color: #0A0A0A;
+    --text-color: rgb(186, 190, 196);
+    --first-color: rgb(243, 37, 22);
+
+    /*=============== FONTS AND TYPOGRAPHY ===============*/
+    --big-font-size: 2rem;
+    --h1-font-size: 2.7rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    /* --body-font-family: 'Uchen', serif; */
+    --normal-font-size: 1.2rem;
+    --small-font-size: .75rem;
+    --tiny-font-size: .5rem;
+    --bolder-font-weight: 900;
+    --bold-font-weight: 700;
+    --normal-font-weight: 500;
+    --thin-font-weight: 300;
+    --thiner-font-weight: 100;
+}
+
+
+/*=============== BASE===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font-family);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    /* min-height: 100vh; */
+    min-height: calc(115rem + var(--footer-height));
+    background: var(--body-color);
+    color: var(--text-color);
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+p, section {
+    margin: 2rem 0;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--bold-font-weight);
+}
+
+h3 {
+    font-weight: var(--normal-font-weight);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
