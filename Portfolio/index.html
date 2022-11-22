@@ -16,46 +16,46 @@
 </head>
 
 <body>
-    <header>
-        <section>
+    <header id="header">
+        <nav class="container section">
             <span>Maxime</span>
-        </section>
-        <section>
-            <i class='bx bx-moon'></i>
-        </section>
+            <i class='bx bx-moon nav__logo'></i>
+        </nav>
     </header>
+
     <main>
-        <section class="myself" id="me">
+        <section class="myself container" id="me">
             <div class="myself_description">
                 Hello, I'm
                 <h1>
                     Maxime Cavallari
                 </h1>
-                Frontend Developer
+                <!-- Frontend Developer -->
+                Web Development Student
             </div>
             <div class="myself_buttons">
-                <a href="#" class="button">Download CV</a>
+                <a href="PDF/" class="button no_full">Download CV</a>
                 <a href="#works" class="button">Projects</a>
             </div>
         </section>
-        <section class="experience" id="exp">
+        <section class="experience container" id="exp">
             <h2>
                 About me
             </h2>
             <div class="experience__grid">
-                <!--?Faire des boxs des liens vers les sections exp et works?-->
-                <div class="experience__grid box">
-                    <i class='bx bx-award experience__icon'></i>
+                <!--TODO:Faire des boxs des liens vers les sections exp et works-->
+                <div class="experience__box box">
+                    <i class='bx bx-award icon'></i>
                     <!-- <h3 class="experience__title">Experience</h3> -->
                     <h3>Experience</h3>
-                    <span class="experience__subtitle">2 Year Working</span>
+                    <span class="experience__subtitle">2 Year Coding</span>
                 </div>
-                <div class="experience__grid box">
-                    <i class='bx bx-briefcase-alt experience__icon'></i>
+                <div class="experience__box box">
+                    <i class='bx bx-briefcase-alt icon'></i>
                     <!-- <h3 class="experience__title">Completed</h3> -->
                     <h3>Completed</h3>
                     <!-- <span class="experience__subtitle">2 Projects</span> -->
-                    <span>2 Projects</span>
+                    <span>0 Projects</span>
                 </div>
                 <!-- <div>
                     <i class='bx bx-support about__icon'></i>
@@ -64,58 +64,64 @@
                 </div> -->
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna
-                aliqua. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Est ultricies integer quis
-                auctor elit sed
-                vulputate mi sit. Nisl rhoncus mattis rhoncus urna.
+                Jeune passioné d'informatique souhaitant faire de sa passion son travail
             </p>
             <a href="#contact" class="button">Contact Me</a>
         </section>
-        <section class="abilities" id="skills">
+        <section class="abilities container" id="skills">
             <h2>
                 My Experience
             </h2>
             <div>
-                <h3>
+                <!-- <h3>
                     Web Developer
-                </h3>
-                <div class="skills">
-                    <div class="skill">
-                        <h4>
-                            HTML
-                        </h4>
-                        <span class="skill__level">Intermediate</span>
+                </h3> -->
+                <div class="skills box">
+                    <div class="skills__group">
+                        <div class="skill__group">
+                            <i class='bx bxs-badge-check icon'></i>
+                            <div class="skill">
+                                <h4>HTML</h4>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill__group">
+                            <i class='bx bxs-badge-check icon'></i>
+                            <div class="skill">
+                                <h4>CSS</h4>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill__group">
+                            <i class='bx bxs-badge-check icon'></i>
+                            <div class="skill">
+                                <h4>JavaScript</h4>
+                                <span class="skill__level">Beginner</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill">
-                        <h4>
-                            CSS
-                        </h4>
-                        <span class="skill__level">Intermediate</span>
-                    </div>
-                    <div class="skill">
-                        <h4>
-                            JavaScript
-                        </h4>
-                        <span class="skill__level">Basic</span>
-                    </div>
-                    <div class="skill">
-                        <h4>
-                            PHP
-                        </h4>
-                        <span class="skill__level">Basic</span>
-                    </div>
-                    <div class="skill">
-                        <h4>
-                            MySQL
-                        </h4>
-                        <span class="skill__level">Basic</span>
-                    </div>
-                    <div class="skill">
-                        <h4>
-                            Git
-                        </h4>
-                        <span class="skill__level">Basic</span>
+                    <div class="skills__group">
+                        <div class="skill__group">
+                            <i class='bx bxs-badge-check icon'></i>
+                            <div class="skill">
+                                <h4>PHP</h4>
+                                <span class="skill__level">Basic</span>
+                            </div>
+                        </div>
+                        <div class="skill__group">
+                            <i class='bx bxs-badge-check icon'></i>
+                            <div class="skill">
+                                <h4>MySQL</h4>
+                                <span class="skill__level">Basic</span>
+                            </div>
+                        </div>
+                        <div class="skill__group">
+                            <i class='bx bxs-badge-check icon'></i>
+                            <div class="skill">
+                                <h4>Git</h4>
+                                <span class="skill__level">Beginner</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,44 +133,48 @@
             </h2>
             
         </section> -->
-        <section class="projects" id="works">
+        <section class="projects container" id="works">
             <h2>
                 My Projects
             </h2>
-            <div>
-                <div>
+            <div class="projects__group">
+                <div class="box">
+                    <img src="images/image_site_default.jpg" alt="default">
+                    <a href="#" target="_blank">Voir le projet<i class='bx bx-right-arrow-alt'></i></a>
+                    
+                </div>
+                <!-- <div class="box">
                     <a href="#" target="_blank">Lorem ipsum</a>
                 </div>
-                <div>
+                <div class="box">
                     <a href="#" target="_blank">Lorem ipsum</a>
-                </div>
-                <div>
-                    <a href="#" target="_blank">Lorem ipsum</a>
-                </div>
+                </div> -->
             </div>
 
         </section>
-        <section class="contact" id="contact">
+        <section class="contact container" id="contact">
             <h2>
                 Contact Me
             </h2>
-            <div class="contact__container grid">
-                <h3>
+            <div class="contact__grid">
+                <!-- <h3>
                     Get In Touch
-                </h3>
+                </h3> -->
                 <div class="contact__box box">
+                    <i class='bx bx-mail-send'></i>
                     <h4>
                         E-mail
                     </h4>
                     <span>maximecav4@gmail.com</span>
-                    <a href="mailto:maximecav4@gmail.com">Write me</a>
+                    <a href="mailto:maximecav4@gmail.com">Write me<i class='bx bx-right-arrow-alt'></i></a>
                 </div>
                 <div class="contact__box box">
+                    <i class='bx bxl-github'></i>
                     <h4>
                         Git Hub
                     </h4>
                     <span>Tatsu14</span>
-                    <a href="github.com/Tatsu14">See my projects</a>
+                    <a href="https://github.com/Tatsu14" target="_blank">See my projects<i class='bx bx-right-arrow-alt'></i></a>
                 </div>
                 <!-- <div class="contact__box box">
                     <h4>
@@ -177,26 +187,31 @@
         </section>
     </main>
     <footer>
-        <section>
+        <section class="container">
             <h2>
                 Maxime
             </h2>
         </section>
-        <section class="travel">
+        <section class="travel container">
             <div>
-                <a href="#exp">About me</a>
+                <a href="#exp">About</a>
                 <a href="#works">Projects</a>
                 <a href="#skills">Experience</a>
             </div>
         </section>
-        <section class="socials">
-            <div>
-                <a href="https://api.whatsapp.com/send?phone=+32495665378&text=Hello, more information!" class="socials__button"><i class='bx bxl-whatsapp'></i></a>
+        <section class="socials container">
+                <a href="https://api.whatsapp.com/send?phone=+32495665378&text=Hello, more information!"
+                    class="socials__button"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://instagram.com/dragensblot" class="socials__button"><i class='bx bxl-instagram'></i></a>
                 <a href="https://twitter.com/tatsu65562515" class="socials__button"><i class='bx bxl-twitter'></i></a>
-            </div>
         </section>
     </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="JS/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="JS/main.js"></script>
 </body>
 
 </html>
