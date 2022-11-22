@@ -1,39 +1,44 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-
     /*=============== VALUES ===============*/
     --header-height: 4rem;
-    --footer-height: ;
+    --img-w: 15rem;
+    /* --footer-height: ; */
 
     /*=============== COLORS ===============*/
     --grey: rgb(110, 110, 110);
     --red: rgb(200, 30, 30);
     --blue: rgb(30, 30, 200);
     --green: rgb(30, 200, 30);
-    --body-color: rgb(11, 17, 25);
-    --body-color: #0A0A0A;
+    --body-color: #0e0e0e;
     --text-color: rgb(186, 190, 196);
     --first-color: rgb(243, 37, 22);
+    --second-color: rgb(233, 27, 12);
+    --third-color: #161616;
+    --footer-color: rgb(132, 1, 1);
 
     /*=============== FONTS AND TYPOGRAPHY ===============*/
-    /* --big-font-size: 2rem; */
     --h1-font-size: 2.5rem;
     --h2-font-size: 1.75rem;
     --h3-font-size: 1.5rem;
-    --body-font-family: 'Poppins', sans-serif;
+    --big-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .75rem;
-    --tiny-font-size: .5rem;
+    --small-font-size: 0.75rem;
+    --tiny-font-size: 0.5rem;
+    --body-font-family: "Poppins", sans-serif;
     --bolder-font-weight: 900;
     --bold-font-weight: 700;
     --normal-font-weight: 500;
     --thin-font-weight: 300;
     --thiner-font-weight: 100;
-}
 
+    --z-toolyp: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
 
 /*=============== BASE===============*/
 * {
@@ -56,22 +61,23 @@ textarea {
 
 body {
     /* min-height: 100vh; */
-    min-height: calc(115rem + var(--footer-height));
+    /* min-height: calc(115rem + var(--footer-height)); */
     background: var(--body-color);
     color: var(--text-color);
-    transition: .4s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transition: 0.4s;
+    /* margin: 0 30rem; */
 }
 
 a {
     color: var(--text-color);
+    /* color: var(--first-color); */
     text-decoration: none;
 }
 
-p, section {
-    margin: 2rem 0;
+p,
+section,
+.section {
+    margin: 1.8rem 0;
 }
 
 ul {
@@ -80,12 +86,15 @@ ul {
 
 h1 {
     font-size: var(--h1-font-size);
-    font-weight: var(--bolder-font-weight); 
+    font-weight: var(--bolder-font-weight);
 }
 
 h2 {
     font-size: var(--h2-font-size);
     font-weight: var(--bold-font-weight);
+    /* color: var(--first-color); */
+    letter-spacing: 1px;
+    margin: 2.5rem 0 2rem;
 }
 
 h3 {
@@ -102,4 +111,311 @@ button {
 img {
     max-width: 100%;
     height: auto;
+}
+
+main {
+    overflow: hidden;
+}
+
+/*=============== REUSABLE CLASSES ===============*/
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    color: var(--body-color);
+    font-weight: 500;
+    background-color: var(--first-color);
+    border-radius: .5rem;
+    transition: .4s;
+}
+
+.button:hover {
+    background-color: var(--second-color);
+    color: var(--body-color);
+}
+
+.no_full {
+    color: var(--first-color);
+    border: 2px solid var(--first-color);
+    background-color: var(--body-color);
+}
+
+.box {
+    border-radius: 1rem;
+    background-color: var(--third-color);
+    margin: 0 2rem;
+    padding: 1.5rem 2rem;
+    transition: .4s;
+}
+
+.icon {
+    font-size: calc(var(--big-font-size) + .1rem);
+    color: var(--first-color);
+    /* padding: 0 .5rem; */
+}
+
+/*=============== HEADER ===============*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
+    /* padding: 0 5rem; */
+    background-color: var(--body-color);
+    /*? si omis le background sera considere comme transparent et donc on verra tous les éléments en-dessous ?*/
+    font-size: calc(var(--normal-font-size) + 0.1rem);
+    z-index: var(--z-fixed);
+}
+
+header span {
+    color: var(--first-color);
+    font-weight: var(--bold-font-weight);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: var(--big-font-size);
+    transition: 0.4s;
+}
+
+.scroll-header {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*=============== MAIN ===============*/
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 6rem auto;
+}
+
+main section {
+    margin: 6rem auto;
+}
+
+
+/*=============== ME ===============*/
+.myself {
+    position: relative;
+    font-size: calc(var(--normal-font-size) - .1rem);
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+.myself_description {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    column-gap: .4rem;
+    margin-bottom: 5rem;
+}
+
+.myself_buttons {
+    display: flex;
+    margin: auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+/*=============== EXP ===============*/
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience__grid {
+    display: grid;
+    row-gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.experience__box {
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience__box:hover {
+    transform: scale(1.03);
+}
+
+.experience__box h3 {
+    color: #fefefe;
+}
+
+/*=============== SKILLS ===============*/
+.abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.abilities span {
+    font-size: var(--small-font-size);
+}
+
+.skills {
+    display: flex;
+    column-gap: 4.5rem;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.skills__group {
+    column-gap: 10rem;
+}
+
+.skill__group {
+    display: flex;
+    gap: .4rem;
+    flex-direction: row;
+    padding: .9rem 0;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: .05rem;
+}
+
+/*=============== PROJECTS ===============*/
+section.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects__group {
+    display: grid;
+    row-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.projects__group img {
+    width: var(--img-w);
+    height: calc(var(--img-w) - 4rem);
+}
+
+.projects__group .box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects__group .box a {
+    color: var(--first-color);
+    display: flex;
+    align-items: center;
+}
+
+.projects .box a:hover i {
+    transform: translateX(5px);
+    transition: ease-in .4s;
+}
+
+.projects .box a i {
+    padding: 0 .2rem;
+    transition: .4s;
+}
+
+/*=============== CONTACT ===============*/
+section.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__box>i {
+    font-size: 2rem;
+    padding-bottom: .4rem;
+}
+
+.contact__box a {
+    color: var(--first-color);
+    display: flex;
+    align-items: center;
+    padding-top: .8rem;
+}
+
+.contact__box a:hover i {
+    transform: translateX(5px);
+    transition: ease-in .4s;
+}
+
+.contact__box a i {
+    padding: 0 .2rem;
+    transition: .4s;
+}
+
+
+/*=============== Footer ===============*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--footer-color);
+    color: var(--body-color);
+}
+
+footer section:not(:last-child) {
+    margin: 0;
+}
+
+footer h2 {
+    margin: 2.5rem 0 1rem;
+}
+
+.travel {
+    padding: .5rem;
+}
+
+footer .travel a {
+    color: var(--body-color);
+    padding: 0 1rem;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socials__button {
+    color: var(--footer-color);
+    background-color: var(--body-color);
+    font-size: var(--big-font-size);
+    padding: .2rem .5rem;
+    border-radius: 10px;
 }
