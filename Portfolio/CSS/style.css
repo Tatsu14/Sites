@@ -1,9 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-
     /*=============== VALUES ===============*/
     --header-height: 4rem;
     --footer-height: ;
@@ -13,27 +12,27 @@
     --red: rgb(200, 30, 30);
     --blue: rgb(30, 30, 200);
     --green: rgb(30, 200, 30);
-    --body-color: rgb(11, 17, 25);
-    --body-color: #0A0A0A;
+    --body-color: #0e0e0e;
     --text-color: rgb(186, 190, 196);
     --first-color: rgb(243, 37, 22);
+    /* --second-color: #202020; */
+    --second-color: rgb(233, 27, 12);
 
     /*=============== FONTS AND TYPOGRAPHY ===============*/
-    /* --big-font-size: 2rem; */
     --h1-font-size: 2.5rem;
     --h2-font-size: 1.75rem;
     --h3-font-size: 1.5rem;
-    --body-font-family: 'Poppins', sans-serif;
+    --big-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .75rem;
-    --tiny-font-size: .5rem;
+    --small-font-size: 0.75rem;
+    --tiny-font-size: 0.5rem;
+    --body-font-family: "Poppins", sans-serif;
     --bolder-font-weight: 900;
     --bold-font-weight: 700;
     --normal-font-weight: 500;
     --thin-font-weight: 300;
     --thiner-font-weight: 100;
 }
-
 
 /*=============== BASE===============*/
 * {
@@ -56,21 +55,22 @@ textarea {
 
 body {
     /* min-height: 100vh; */
-    min-height: calc(115rem + var(--footer-height));
+    /* min-height: calc(115rem + var(--footer-height)); */
     background: var(--body-color);
     color: var(--text-color);
-    transition: .4s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transition: 0.4s;
+    /* margin: 0 30rem; */
 }
 
 a {
     color: var(--text-color);
+    /* color: var(--first-color); */
     text-decoration: none;
 }
 
-p, section {
+p,
+section,
+.section {
     margin: 2rem 0;
 }
 
@@ -80,7 +80,7 @@ ul {
 
 h1 {
     font-size: var(--h1-font-size);
-    font-weight: var(--bolder-font-weight); 
+    font-weight: var(--bolder-font-weight);
 }
 
 h2 {
@@ -102,4 +102,97 @@ button {
 img {
     max-width: 100%;
     height: auto;
+}
+
+main {
+    overflow: hidden;
+}
+
+/*=============== REUSABLE CLASSES ===============*/
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    color: var(--body-color);
+    font-weight: 500;
+    background-color: var(--first-color);
+    border-radius: .5rem;
+    transition: .4s;
+}
+
+.button:hover {
+    background-color: var(--second-color);
+    color: var(--body-color);
+}
+
+.no_full {
+    color: var(--first-color);
+    border: 2px solid var(--first-color);
+    background-color: var(--body-color);
+}
+
+/*=============== HEADER ===============*/
+header {
+    position: fixed;
+    /* height: var(--header-height); */
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
+    /* padding: 0 5rem; */
+    /* background-color: var(--second-color); */
+    font-size: calc(var(--normal-font-size) + 0.1rem);
+    z-index: 100;
+}
+
+header span {
+    color: var(--first-color);
+    font-weight: var(--bold-font-weight);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: var(--big-font-size);
+    transition: 0.4s;
+}
+
+.scroll-header {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*=============== MAIN ===============*/
+.myself {
+    position: relative;
+    font-size: calc(var(--normal-font-size) - .1rem);
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+.myself_description {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    column-gap: .4rem;
+    margin-bottom: 5rem;
+}
+
+.myself_buttons {
+    display: flex;
+    margin: auto;
+    gap: 2rem;
+    align-items: center;
 }

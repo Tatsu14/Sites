@@ -16,16 +16,15 @@
 </head>
 
 <body>
-    <header>
-        <section>
+    <header id="header">
+        <nav class="container section">
             <span>Maxime</span>
-        </section>
-        <section>
-            <i class='bx bx-moon'></i>
-        </section>
+            <i class='bx bx-moon nav__logo'></i>
+        </nav>
     </header>
+
     <main>
-        <section class="myself" id="me">
+        <section class="myself container" id="me">
             <div class="myself_description">
                 Hello, I'm
                 <h1>
@@ -34,11 +33,11 @@
                 Frontend Developer
             </div>
             <div class="myself_buttons">
-                <a href="#" class="button">Download CV</a>
+                <a href="PDF/" class="button no_full">Download CV</a>
                 <a href="#works" class="button">Projects</a>
             </div>
         </section>
-        <section class="experience" id="exp">
+        <section class="experience container" id="exp">
             <h2>
                 About me
             </h2>
@@ -72,7 +71,7 @@
             </p>
             <a href="#contact" class="button">Contact Me</a>
         </section>
-        <section class="abilities" id="skills">
+        <section class="abilities container" id="skills">
             <h2>
                 My Experience
             </h2>
@@ -127,7 +126,7 @@
             </h2>
             
         </section> -->
-        <section class="projects" id="works">
+        <section class="projects container" id="works">
             <h2>
                 My Projects
             </h2>
@@ -144,7 +143,7 @@
             </div>
 
         </section>
-        <section class="contact" id="contact">
+        <section class="contact container" id="contact">
             <h2>
                 Contact Me
             </h2>
@@ -177,26 +176,33 @@
         </section>
     </main>
     <footer>
-        <section>
+        <section class="container">
             <h2>
                 Maxime
             </h2>
         </section>
-        <section class="travel">
+        <section class="travel container">
             <div>
                 <a href="#exp">About me</a>
                 <a href="#works">Projects</a>
                 <a href="#skills">Experience</a>
             </div>
         </section>
-        <section class="socials">
+        <section class="socials container">
             <div>
-                <a href="https://api.whatsapp.com/send?phone=+32495665378&text=Hello, more information!" class="socials__button"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+32495665378&text=Hello, more information!"
+                    class="socials__button"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://instagram.com/dragensblot" class="socials__button"><i class='bx bxl-instagram'></i></a>
                 <a href="https://twitter.com/tatsu65562515" class="socials__button"><i class='bx bxl-twitter'></i></a>
             </div>
         </section>
     </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="JS/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="JS/main.js"></script>
 </body>
 
 </html>
